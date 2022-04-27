@@ -20,7 +20,7 @@ object WallService {
                 postsArr[idx] = currentPost.copy(
                     id = post.id,
                     authorName = post.authorName,
-                    content = post.content
+                    content = post.content,
                     likes = post.likes
                 )
                 postUpdating = true
