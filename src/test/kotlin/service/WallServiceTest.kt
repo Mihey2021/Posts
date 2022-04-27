@@ -4,8 +4,13 @@ import data.Post
 import org.junit.Test
 
 import org.junit.Assert.*
+import org.junit.Before
 
 class WallServiceTest {
+    @Before
+    fun clear() {
+        WallService.clearWall()
+    }
 
     @Test
     fun add() {
@@ -19,7 +24,6 @@ class WallServiceTest {
             Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes)
 
         //2.Act — выполнение целевого действия (вызов функции).
-        WallService.clearWall()
         val createdPost = WallService.add(post)
 
         //3.Assert — сравнение ожидаемого результата с фактическим.
@@ -54,7 +58,6 @@ class WallServiceTest {
             )
 
         //2.Act — выполнение целевого действия (вызов функции).
-        WallService.clearWall()
         WallService.add(post)
         val result = WallService.update(updatingPost)
 
@@ -90,7 +93,6 @@ class WallServiceTest {
             )
 
         //2.Act — выполнение целевого действия (вызов функции).
-        WallService.clearWall()
         WallService.add(post)
         val result = WallService.update(updatingPost)
 
@@ -104,7 +106,6 @@ class WallServiceTest {
         //ничего не задаем
 
         //2.Act — выполнение целевого действия (вызов функции).
-        WallService.clearWall()
         val result = WallService.getLastPostId()
 
         //3.Assert — сравнение ожидаемого результата с фактическим.
@@ -123,7 +124,6 @@ class WallServiceTest {
             Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes)
 
         //2.Act — выполнение целевого действия (вызов функции).
-        WallService.clearWall()
         WallService.add(post)
         val result = WallService.getLastPostId()
 
