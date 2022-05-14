@@ -9,5 +9,6 @@ data class Post(
     val likes: Int,
     val owner_id: Int? = null,
     val from_id: Int? = null,
-    val friends_only: Int? = null
+    val friends_only: Int? = null,
+    val comments: Int? = null
 )
