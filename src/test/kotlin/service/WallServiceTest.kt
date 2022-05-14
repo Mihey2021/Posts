@@ -21,7 +21,7 @@ class WallServiceTest {
         val created: Long = 20220423
         val likes = 0
         val post =
-            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes)
+            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes, owner_id = null, from_id = null, friends_only = null)
 
         //2.Act — выполнение целевого действия (вызов функции).
         val createdPost = WallService.add(post)
@@ -39,7 +39,7 @@ class WallServiceTest {
         val created: Long = 20220423
         val likes = 0
         val post =
-            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes)
+            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes, owner_id = null, from_id = null, friends_only = null)
 
         val updatingId = 1
         val updatingAuthorId = 1
@@ -74,7 +74,7 @@ class WallServiceTest {
         val created: Long = 20220423
         val likes = 0
         val post =
-            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes)
+            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes, owner_id = null, from_id = null, friends_only = null)
 
         val updatingId = 17 //несуществующий пост
         val updatingAuthorId = 1
@@ -121,7 +121,7 @@ class WallServiceTest {
         val created: Long = 20220423
         val likes = 0
         val post =
-            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes)
+            Post(authorId = authorId, authorName = authorName, content = content, created = created, likes = likes, owner_id = null, from_id = null, friends_only = null)
 
         //2.Act — выполнение целевого действия (вызов функции).
         WallService.add(post)

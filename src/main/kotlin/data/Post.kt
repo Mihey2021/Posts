@@ -6,5 +6,8 @@ data class Post(
     val authorName: String,
     val content: String,
     val created: Long,
-    val likes: Int
+    val likes: Int,
+    val owner_id: Int? = null,
+    val from_id: Int? = null,
+    val friends_only: Int? = null
 )
